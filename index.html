@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Window example for Aymen</title>
+    <link rel="stylesheet" href="./css/popup.css" type="text/css">
+</head>
+<body>
+    <button class="open-btn" onclick="openWindow({title: 'Static text example', content:'Hello Aymen this is an example for you to text window features'})">Open window</button>
+    <button class="open-btn" onclick="openWindow({title: 'Load file into window example', file: './assets/content.html'})">Open file in window</button>
+    <h4><mark>Click again and again ;)  You will always get a new window!</mark></h4>
+    <script src="js/popup.js"></script>
+    <script>
+        // show({title: "Hello window example", content: "Hello Aymen this is an example for you to text window features"});
+        // show({title: "Hello window example", file: "./assets/content.html"});
+        /**
+         * javascript function invoked by button click
+         * this function will trigger some functions
+         * written within popup.js file to create window
+         */
+        function openWindow(win) {
+            // write console to track the function execution.
+            console.log("[openWindow] function - start.");
+            // make try catch block to detect any error
+            try {
+                show(win);
+            } catch (e) {
+                // log error to console if exist
+                console.error("[openWindow] function - error: ", e);
+            }
+            // write console to track the function execution.
+            console.log("[openWindow] function - end.");
+        }
+    </script>
+</body>
+</html>
